@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicebusApp.ProducerApi", "ServicebusApp.ProducerApi\ServicebusApp.ProducerApi.csproj", "{BFA62BC4-FA59-4B7C-859A-9969680FD543}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicebusApp.Common", "ServicebusApp.Common\ServicebusApp.Common.csproj", "{49AC397C-023C-4AC1-BC06-9AB83E61AAFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BFA62BC4-FA59-4B7C-859A-9969680FD543}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFA62BC4-FA59-4B7C-859A-9969680FD543}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFA62BC4-FA59-4B7C-859A-9969680FD543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49AC397C-023C-4AC1-BC06-9AB83E61AAFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49AC397C-023C-4AC1-BC06-9AB83E61AAFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49AC397C-023C-4AC1-BC06-9AB83E61AAFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49AC397C-023C-4AC1-BC06-9AB83E61AAFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
