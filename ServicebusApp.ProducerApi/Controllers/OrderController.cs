@@ -30,9 +30,16 @@ namespace ServicebusApp.ProducerApi.Controllers
                 CreatedOn = DateTime.Now
             };
 
-            await _azureService.CreateQueueIfNotExists(Constants.OrderCreatedQueueName);
+            // Queue
+            //await _azureService.CreateQueueIfNotExists(Constants.OrderCreatedQueueName);
 
-            await _azureService.SendMessageToQueue(Constants.OrderCreatedQueueName,orderCreatedEvent);
+            //await _azureService.SendMessageToQueue(Constants.OrderCreatedQueueName,orderCreatedEvent);
+
+            // Topic
+            await _azureService.CreateTopicIfNotExists(Constants.OrderTopic);
+            await _azureService.CreateSubscriptionIfNotExists(Constants.OrderTopic,Constants.OrderCreatedSubName, "OrderCreated", "OrderCreatedOnly");
+
+            await _azureService.SendMessageToTopic(Constants.OrderTopic, orderCreatedEvent, "OrderCreated");
         }
 
         [HttpDelete("{id}")]
@@ -46,9 +53,16 @@ namespace ServicebusApp.ProducerApi.Controllers
                 CreatedOn = DateTime.Now
             };
 
-            await _azureService.CreateQueueIfNotExists(Constants.OrderDeletedQueueName);
+            //Queue
+            //await _azureService.CreateQueueIfNotExists(Constants.OrderDeletedQueueName);
 
-            await _azureService.SendMessageToQueue(Constants.OrderDeletedQueueName, orderDeletedEvent);
+            //await _azureService.SendMessageToQueue(Constants.OrderDeletedQueueName, orderDeletedEvent);
+
+            // Topic
+            await _azureService.CreateTopicIfNotExists(Constants.OrderTopic);
+            await _azureService.CreateSubscriptionIfNotExists(Constants.OrderTopic, Constants.OrderDeletedSubName, "OrderDeleted", "OrderDeletedOnly");
+
+            await _azureService.SendMessageToTopic(Constants.OrderTopic, orderDeletedEvent, "OrderDeleted");
         }
     }
 }
