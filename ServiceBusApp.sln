@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServicebusApp.ProducerApi",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServicebusApp.Common", "ServicebusApp.Common\ServicebusApp.Common.csproj", "{49AC397C-023C-4AC1-BC06-9AB83E61AAFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBusApp.Consumer", "ServiceBusApp.Consumer\ServiceBusApp.Consumer.csproj", "{D4ACE9BA-06F2-4C14-84D0-6B297452746F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServicebusApp.Consumer", "ServiceBusApp.Consumer\ServicebusApp.Consumer.csproj", "{D4ACE9BA-06F2-4C14-84D0-6B297452746F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
